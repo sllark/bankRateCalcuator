@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bank Rate Calculator</title>
+  
+  
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Roboto, sans-serif;
+    }
+    h1{
+      text-align: center;
+      margin: 1rem;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    label{
+      margin: 1rem;
+      width: 400px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      font-size: 16px;
+    }
+    input,select{
+      min-width: 180px;
+      padding: 0 5px;
+    }
+    
+    .sideLable{
+      position: absolute;
+      right: -14%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+
+<h1>Bank Rate Calculator</h1>
+
+
+<label for="customerType">
+  Type of Customer:
+  <!--<input type="text" id="customerType">-->
+  <select name="customerType" id="customerType">
+    <option value="I am first time ">I am first time </option>
+    <option value="I am remortgaging">I am remortgaging</option>
+    <option value="I am moving house">I am moving house</option>
+  </select>
+</label>
+
+
+<label for="repaymentType">
+  Repayment Type:
+  <select name="repaymentType" id="repaymentType">
+    <option value="Repayment">Repayment </option>
+    <option value="Interest Only">Interest Only</option>
+  </select></label>
+
+
+
+<label for="propertyValue">
+  Property Value:
+  <input type="text" id="propertyValue" value="50000">
+</label>
+
+<label for="depositAmount">
+  Deposit Amount:
+  <input type="text" id="depositAmount" value="1000">
+</label>
+
+
+<label for="netPropertyValue">
+  Net Property Value:
+  <input type="text" id="netPropertyValue" value="49000">
+</label>
+
+
+<label for="mortgageTerm">
+  Mortgage Term:
+  <input type="text" id="mortgageTerm" value="25">
+  <p class="sideLable">Years</p>
+
+</label>
+
+
+<label for="MortgageTermMonths">
+  Mortgage Term (Months):
+  <input type="text" id="MortgageTermMonths" value="300" disabled>
+  <p class="sideLable">Months</p>
+
+</label>
+
+<label for="periodPerYear">
+  Compounding Period Per Year:
+  <input type="text" id="periodPerYear" value="12">
+</label>
+
+
+
+<label for="initInterestRate">
+  Initial Interest Rate:
+  <input type="text" id="initInterestRate" value="0.9">
+</label>
+
+<label for="monthlyPayment">
+  Monthly Mortgage Payment:
+  <input type="text" id="monthlyPayment">
+</label>
+
+<label for="totalMortgage">
+  Total Mortgage Cost (with interest)
+  <input type="text" id="totalMortgage">
+</label>
+
+<label for="LTV">
+  Loan to Value (LTV):
+  <input type="text" id="LTV">
+</label>
+
+<label for="totalMortgageInterest">
+  Total Mortgage Cost (in Interest Only Case):
+  <input type="text" id="totalMortgageInterest">
+</label>
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
